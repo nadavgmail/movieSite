@@ -1,0 +1,44 @@
+﻿body {
+	direction:rtl;
+	background-color:#eee;
+}
+
+INPUT{direction:rtl;}
+
+
+div.mainSite{
+	width:900px !important;
+	text-align:center;
+	margin:0 auto;
+	border:solid 1px blue;}
+
+div.headerArea{
+	
+	width:630px;
+	margin:10px auto;
+	padding:2px;
+	}
+	
+div.tab
+{
+	float:right;
+	border-left:solid 1px green;
+	margin-left:10px;
+	padding-left:10px;
+
+}
+
+div.tab:hover{
+	cursor:pointer;
+	font-weight:bold;
+	background-color:#00B600;}
+	
+.breaker{
+	clear:both;
+	float:none;}
+	
+div.right{
+	width:200px;
+	height:400px;
+	float:right;
+	border:solid 1px blue;}

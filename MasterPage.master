@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <style type="text/css">
+    A{text-decoration:none;
+      color:#000;}
+    h2 {
+	position:absolute;
+	
+	right: 290px;}
+	
+
+    
+    </style>
+    <link href="<%= ResolveUrl("~/css/common.css") %>" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+       
+         function checkphone(source, args) {
+           if (!(args.Value.length == 10 || args.Value.length==9))
+                args.IsValid = false;
+            else
+                for(var i=0;i<args.Value.length;i++)
+                {
+                if(!((char)(args.Value[i]) >=48 && (char)(args.Value[i])<=57))
+                    {
+                    args.IsValid = false;
+                    }
+                }
+        }
+    </script>
+</head>
+
+<body dir=rtl>
+    
+    
+    <form id="form1" runat="server">
+        <div class="mainSite">
+           <div align="center" style="height: 129px; width: 700px;"> 
+                <asp:Image ID="Image1" runat="server" Height="139px" ImageAlign="AbsMiddle" 
+                    ImageUrl="~/pictures/moavlogo.bmp" Width="358px" />
+            </div>
+            <br />  
+            
+            <uc:Header runat="server" />
+            
+            <div class="right"></div>
+            
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                           
+            </asp:ContentPlaceHolder>        
+        </div>
+    </form>
+    </body>
+</html>
